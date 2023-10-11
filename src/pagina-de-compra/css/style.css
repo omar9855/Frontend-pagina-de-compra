@@ -55,6 +55,7 @@ h3 {
     font-size: 2.4rem;
 }
 
+
 /** Header **/
 .header {
     display: flex;
@@ -165,6 +166,27 @@ h3 {
 .producto {
     background-color: var(--primarioOscuro);
     padding: 1rem;
+}
+.calificacion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 1rem 1rem 1rem;
+    color: var(--secundario);
+    font-family: var(--fuentePrincipal);
+    font-size: 2.5rem;
+}
+.contenedor_estrellas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0rem 1rem 1rem 1rem;
+}
+.star {
+	color: gold;
+	font-size: 2.5rem;
+    
+    
 }
 
 .producto__imagen{
