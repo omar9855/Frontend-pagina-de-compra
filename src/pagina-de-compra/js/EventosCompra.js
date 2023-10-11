@@ -5,6 +5,7 @@ function buscarProductos() {
     let productos = document.querySelectorAll(".producto");
     let productosEncontrados = false; 
 
+
     productos.forEach(function(producto) {
         let nombreProducto = producto.querySelector(".producto__nombre").textContent.toLowerCase();
 
@@ -18,7 +19,13 @@ function buscarProductos() {
 
     let mensajeNoResultados = document.getElementById("mensajeNoResultados");
     if (!productosEncontrados) {
-        mensajeNoResultados.style.display = "block";
+        mensajeNoResultados.style.display = "flex";
+        mensajeNoResultados.style.padding = "1rem";
+        mensajeNoResultados.style.margin = "1rem 0rem";
+        mensajeNoResultados.style.display = "flex";
+        mensajeNoResultados.style.flexDirection = "column";
+        mensajeNoResultados.style.justifyContent = "center";
+        mensajeNoResultados.style.alignItems = "center";
     } else {
         mensajeNoResultados.style.display = "none";
     }

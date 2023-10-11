@@ -10,10 +10,12 @@
 </head>
 <body>
     <header class="header">
-        <a href="../pagina-principal/index.html">
-            <img class="header__logo" src="img/logo.png" alt="Logotipo">
+        <a href="../pagina-principal/index.html" class="header__logo">
+            <img src="../pagina-principal/imgs/logo.png" alt="Logotipo">
         </a>
-    </div>
+        <a href="../pagina-principal/index.html">
+            <h1 class=".header__logo__txt">Play & Games</h1>
+        </a>
     </header>
 
     <nav class="navegacion">
@@ -24,15 +26,19 @@
     <main class="contenedor">
         <h1>Nuestros Productos</h1>
         <div class="buscador">
-            <input type="text" id="inputBusqueda" placeholder="Buscar productos...">
-            <button onclick="buscarProductos()">Buscar</button>
-            <button onclick="restablecerProductos()">Restablecer</button>
-            <div id="mensajeNoResultados" style="display: none;">No se encontraron resultados.
+            <input type="text" id="inputBusqueda" placeholder="Buscar productos..." class="buscador__input">
+            <button onclick="buscarProductos()" class="buscador__boton">Buscar</button>
+            <button onclick="restablecerProductos()" class="buscador__boton">Restablecer</button>
+            
+        </div>
+        <div id="mensajeNoResultados" style="display: none;"> 
+            <h2>No se encontraron resultados</h2>
+            <img src="imgs/sinresultados..jpeg" alt="lo di todo" class="mensaje__img">
         </div>
         <div class="grid">
             <div class="producto">
                 <a href="productos/naruto.html">
-                    <img class="producto__imagen" src="img/1.jpg" alt="imagen juego">
+                    <img class="producto__imagen" src="imgs/img_naruto.webp" alt="imagen juego">
                     <div class="producto__informacion">
                         <p class="producto__nombre">Naruto Storm</p>
                         <p class="producto__precio">$25</p>
@@ -41,7 +47,7 @@
             </div>  <!--.producto-->
             <div class="producto">
                 <a href="productos/ZeldaMajorasMask.html">
-                    <img class="producto__imagen" src="img/2.jpg" alt="imagen juego">
+                    <img class="producto__imagen" src="imgs/img_zeldamajora.webp" alt="imagen juego">
                     <div class="producto__informacion">
                         <p class="producto__nombre">Zelda Majoras Mask</p>
                         <p class="producto__precio">$25</p>
@@ -50,7 +56,7 @@
             </div>  <!--.producto-->
             <div class="producto">
                 <a href="productos/ZeldaOcarina.html">
-                    <img class="producto__imagen" src="img/3.jpg" alt="imagen juego">
+                    <img class="producto__imagen" src="imgs/img_zeldaocarina.webp" alt="imagen juego">
                     <div class="producto__informacion">
                         <p class="producto__nombre">Zelda Ocarina</p>
                         <p class="producto__precio">$25</p>
@@ -59,7 +65,7 @@
             </div>  <!--.producto-->
             <div class="producto">
                 <a href="productos/BanjoTooie.html">
-                    <img class="producto__imagen" src="img/4.jpg" alt="imagen juego">
+                    <img class="producto__imagen" src="imgs/img_banjot.webp" alt="imagen juego">
                     <div class="producto__informacion">
                         <p class="producto__nombre">Banjo Tooie</p>
                         <p class="producto__precio">$25</p>
@@ -68,7 +74,7 @@
             </div>  <!--.producto-->
             <div class="producto">
                 <a href="productos/BanjoKazooie.html">
-                    <img class="producto__imagen" src="img/5.jpg" alt="imagen juego">
+                    <img class="producto__imagen" src="imgs/img_banjo.webp" alt="imagen juego">
                     <div class="producto__informacion">
                         <p class="producto__nombre">Banjo Kazooie</p>
                         <p class="producto__precio">$25</p>
@@ -77,7 +83,7 @@
             </div>  <!--.producto-->
             <div class="producto">
                 <a href="productos/SuperMario64.html">
-                    <img class="producto__imagen" src="img/6.jpg" alt="imagen juego">
+                    <img class="producto__imagen" src="imgs/img_mario64.webp" alt="imagen juego">
                     <div class="producto__informacion">
                         <p class="producto__nombre">Super Mario 64</p>
                         <p class="producto__precio">$25</p>
@@ -86,7 +92,7 @@
             </div>  <!--.producto-->
             <div class="producto">
                 <a href="productos/StarFox.html">
-                    <img class="producto__imagen" src="img/7.jpg" alt="imagen juego">
+                    <img class="producto__imagen" src="imgs/img_starfox.jpg" alt="imagen juego">
                     <div class="producto__informacion">
                         <p class="producto__nombre">Star Fox</p>
                         <p class="producto__precio">$25</p>
@@ -95,7 +101,7 @@
             </div>  <!--.producto-->
             <div class="producto">
                 <a href="productos/CallDutyModernWarfare.html">
-                    <img class="producto__imagen" src="img/8.jpg" alt="imagen juego">
+                    <img class="producto__imagen" src="imgs/img_callofduty.webp" alt="imagen juego">
                     <div class="producto__informacion">
                         <p class="producto__nombre">Call of Duty Modern Warfare</p>
                         <p class="producto__precio">$25</p>
@@ -104,7 +110,7 @@
             </div>  <!--.producto-->
             <div class="producto">
                 <a href="productos/ResidentEvil4Remake.html">
-                    <img class="producto__imagen" src="img/9.jpg" alt="imagen juego">
+                    <img class="producto__imagen" src="imgs/img_resident.webp" alt="imagen juego">
                     <div class="producto__informacion">
                         <p class="producto__nombre">Resident Evil 4 Remake</p>
                         <p class="producto__precio">$25</p>

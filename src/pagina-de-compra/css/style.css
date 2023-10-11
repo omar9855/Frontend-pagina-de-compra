@@ -1,9 +1,10 @@
 :root {
-    --primario: #9C27B0;
-    --primarioOscuro: #89119D;
-    --secundario: #FFCE00;
-    --secundarioOscuro: rgb(233, 187, 2);
-    --blanco: #FFF;
+    --primario: #0476D9;
+    --primarioOscuro: #03071e;
+    --secundario: #F2E205;
+    --secundarioOscuro: #F2CB05;
+    --blanco: #edf2f4;
+    --negroLogo: #000814;
     --negro: #000;
 
     --fuentePrincipal: 'Staatliches', cursive;
@@ -57,11 +58,21 @@ h3 {
 /** Header **/
 .header {
     display: flex;
+    align-items: center;
     justify-content: center;
+    background-color: var(--negroLogo);
 }
 .header__logo {
-    margin: 3rem 0;
+    width: 20rem;
+    margin: 1rem 0;
 }
+
+.header__logo__txt{
+    font-size: 4rem;
+    
+}
+
+
 /** Footer **/
 .footer {
     background-color: var(--primarioOscuro);
@@ -90,6 +101,53 @@ h3 {
 .navegacion__enlace:hover {
     color: var(--secundario);
 }
+/** byscador **/
+.buscador{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem 1rem 1rem;
+}
+
+.buscador__input{
+    background: #fff;
+    border-radius: 1rem;
+    height: 4rem;
+    width: 50%;
+    margin: 1rem;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+}
+
+.buscador__boton{
+    border-radius: 1rem;
+    background-color: #fff;
+    border: none;
+    font-family: var(--fuentePrincipal);
+    color: #000;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
+    width: 20rem;
+    margin: 1rem;
+    transition: all 0.5s;
+    cursor: pointer;
+    padding-bottom: 1rem;
+}
+
+.buscador__boton:hover{
+    cursor: pointer;
+    background-color: var(--secundario)
+}
+ 
+
+/** Mensaje **/
+
+.mensaje__img{
+    width: 50%;
+}
 
 /** Grid **/
 .grid {
@@ -107,6 +165,13 @@ h3 {
 .producto {
     background-color: var(--primarioOscuro);
     padding: 1rem;
+}
+
+.producto__imagen{
+    width: 370px;
+    height: 250px; 
+    object-fit: cover;
+    
 }
 
 .producto__nombre {
@@ -148,14 +213,20 @@ h3 {
     }
 }
 
+.juego{
+    padding: 2rem;
+}
+
 .formulario {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    padding: 2rem;
 }
 .formulario__campo {
     border: 1rem solid var(--primarioOscuro);
-    background-color: transparent;
+    border-radius: 2rem;
+    background-color: var(--negroLogo);
     color: var(--blanco);
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
@@ -163,15 +234,16 @@ h3 {
     appearance: none;
 }
 .formulario__submit {
-    background-color: var(--secundario);
+    background-color: var(--blanco);
     border: none;
     font-size: 2rem;
     font-family: var(--fuentePrincipal);
     padding: 2rem;
     transition: background-color .3s ease;
     grid-column: 1 / 3;
+    border-radius: 2rem;
 }
 .formulario__submit:hover {
     cursor: pointer;
-    background-color: var(--secundarioOscuro);
+    background-color: var(--secundario);
 }
