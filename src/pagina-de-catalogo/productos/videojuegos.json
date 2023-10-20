@@ -1,0 +1,58 @@
+{
+    "videojuegos": [
+      {
+        "titulo": "The Legend of Zelda: Ocarina of Time",
+        "plataforma": "Nintendo 64",
+        "precio": 29.99,
+        "calificacion": 10
+      },
+      {
+        "titulo": "Banjo-Kazooie",
+        "plataforma": "Nintendo 64",
+        "precio": 19.99,
+        "calificacion": 9
+      },
+      {
+        "titulo": "Banjo-Tooie",
+        "plataforma": "Nintendo 64",
+        "precio": 24.99,
+        "calificacion": 9
+      },
+      {
+        "titulo": "Call of Duty: Modern Warfare",
+        "plataforma": "PlayStation 4",
+        "precio": 39.99,
+        "calificacion": 8
+      },
+      {
+        "titulo": "Naruto: Ultimate Ninja Storm",
+        "plataforma": "PlayStation 5",
+        "precio": 49.99,
+        "calificacion": 8.5
+      },
+      {
+        "titulo": "Resident Evil 4 Remake",
+        "plataforma": "Xbox Series X",
+        "precio": 59.99,
+        "calificacion": 9.5
+      },
+      {
+        "titulo": "Star Fox 64",
+        "plataforma": "Nintendo 64",
+        "precio": 19.99,
+        "calificacion": 8.5
+      },
+      {
+        "titulo": "Super Mario 64",
+        "plataforma": "Nintendo 64",
+        "precio": 29.99,
+        "calificacion": 9.5
+      },
+      {
+        "titulo": "The Legend of Zelda: Majora's Mask",
+        "plataforma": "Nintendo 64",
+        "precio": 29.99,
+        "calificacion": 9.5
+      }
+    ]
+  }
