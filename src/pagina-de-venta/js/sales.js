@@ -309,7 +309,7 @@ function deleteSale(saleId) {
 
   if (confirm) {
 
-    fetchAPI(`${apiURL}/sales/${saleId}`, 'DELETE')
+    fetchAPI(`${apiURL}/venta/${saleId}`, 'DELETE')
       .then(() => {
         resetSales();
         window.alert("Venta eliminada.");
