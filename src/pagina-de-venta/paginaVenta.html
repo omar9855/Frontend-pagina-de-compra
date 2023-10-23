@@ -28,9 +28,9 @@
 
     <main>
 
-        <div>
-            <h1>Ventas</h1>
-            <button id="addSale">Agregar Nueva Venta</button>
+        <div class="h2button">
+            <h1 style="color: #000;">Ventas</h1>
+            <button id="addSale" class="venta-button">Agregar Nueva Venta</button>
         </div>
 
         <div class="principal">
@@ -38,19 +38,19 @@
             <!--area para el buscador de ventas-->
 
             <form id="filter-form" class="filter-section">
-                <select id="real-estate-filter" class="filter-field" placeholder="Modelo de Casa">
+                <select id="videojuegos-filter" class="filter-field" placeholder="Modelo de Casa">
                     <option value="" selected>Todos los videojuegos</option>
                 </select>
 
 
-                <input type="text" id="customer-filter" placeholder="Nombre del Cliente" class="filter-field">
-                <input type="text" id="salesman-filter" placeholder="Nombre del Vendedor" class="filter-field">
-                <input type="date" id="date-filter" placeholder="Precio máximo" class="filter-field">
+                <input type="text" id="cliente-filter" placeholder="Nombre del Cliente" class="filter-field">
+                <input type="text" id="vendedor-filter" placeholder="Nombre del Vendedor" class="filter-field">
+                <input type="date" id="fecha-filter" placeholder="Precio máximo" class="filter-field">
 
                 <button type="submit" id="apply-filters" class="btn-submit">Consultar</button>
                 <button type="reset" id="reset-filters" class="btn">Limpiar</button>
             </form>
-
+            <br>
             <!--area de la consulta de datos-->
             <div class="table-container">
                 <table id="data-table">
@@ -81,12 +81,12 @@
             <!--modal para la nueva venta-->
             <div id="modal" class="modal">
 
-                <h2>Nueva venta</h2>
+                <h2 style="color: #000;">Nueva venta</h2>
 
                 <form id="sale-form" class="form-section">
 
-                    <label for="real-estate-field">Titulo:</label>
-                    <select id="real-estate-field" class="form-field" required>
+                    <label for="titulo-field">Titulo:</label>
+                    <select id="titulo-field" class="form-field" required>
                         <!-- Llenaremos las opciones con datos consumidos desde una api -->
                     </select>
 

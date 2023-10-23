@@ -1,3 +1,8 @@
+// #region 1.variables globales 
+const imagePath = `./imgs/`;
+
+//#endregion
+
 
 function buscarProductos() {
     let inputBusqueda = document.getElementById("inputBusqueda");
