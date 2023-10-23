@@ -46,7 +46,7 @@ class VideojuegosDescriptor {
 
 function mapAPIToVideojuegosDescriptors(data) {
   return data.map((item) => {
-    return new VBArrayeDescriptor(item.id, item.titulo, item.precio);
+    return new VideojuegosDescriptor(item.id, item.titulo, item.precio);
   });
 }
 
@@ -277,7 +277,7 @@ function displayVideojuegosOptions(videojuegos) {
 function getVideojuegosData() {
   fetchAPI(`${apiURL}/videojuegos`, 'GET')
   .then(data => {
-    const videojuegosList = mapAPIToRealEstateDescriptors(data);
+    const videojuegosList = mapAPIToVideojuegosDescriptors(data);
     displayVideojuegosOptions(videojuegosList);
   });
 }
@@ -350,6 +350,6 @@ initAddSaleButtonsHandler();
 
 initFilterButtonsHandler();
 
-getRealEstateData();
+getVideojuegosData(); 
 
 //#endregion
