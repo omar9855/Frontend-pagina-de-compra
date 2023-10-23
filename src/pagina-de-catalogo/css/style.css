@@ -199,6 +199,12 @@ h3 {
 .producto__nombre {
     font-size: 4rem;
 }
+
+.div__precio{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 .producto__precio {
     font-size: 2.8rem;
     color: var(--secundario);

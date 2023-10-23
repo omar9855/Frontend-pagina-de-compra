@@ -32,7 +32,7 @@ body {
 p {
     font-size: 1.8rem;
     font-family: Arial, Helvetica, sans-serif;
-    color: var(--negroLogo);
+    color: var(--blanco);
 }
 
 a {
@@ -131,11 +131,7 @@ main {
     margin: 1.5rem;
 }
 
-.h2button {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
+
 
 .venta-button {
     border-radius: 1rem;
@@ -238,8 +234,9 @@ thead tr {
     color: var(--negro);
     text-align: left;
 
-  
+
 }
+
 th {
     border: none;
     font-size: 2rem;
@@ -275,10 +272,16 @@ td {
 /*message*/
 .message {
     text-align: center;
-    font-size: 1rem;
+    font-size: 2rem;
     padding: 2rem;
-    
-  }
+}
+
+.message_p {
+    color: var(--primarioOscuro);
+    font-family: var(--fuentePrincipal);
+    font-size: 2rem;
+}
+
 /*modal*/
 .modal-background {
     display: none;
@@ -288,10 +291,10 @@ td {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-  }
-  
-  
-  .modal {
+}
+
+
+.modal {
     display: none;
     position: fixed;
     top: 50%;
@@ -301,7 +304,8 @@ td {
     padding: 20px;
     border: 1px solid #ccc;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+}
+
 /*botones*/
 
 button {
@@ -318,12 +322,12 @@ button {
         color: var(--negro);
     }
 
-    &.btn:hover{
+    &.btn:hover {
         background-color: var(--secundarioOscuro);
         transition: all 0.5s;
     }
 
-    &.btn-submit:hover{
+    &.btn-submit:hover {
         background-color: var(--verde);
         transition: all 0.5s;
     }

@@ -7,10 +7,10 @@
         var modal = document.getElementById("modal");
         modal.style.display = "none";
     }
-
+    
     document.getElementById("cantidad-field").addEventListener("input", function () {
         const cantidad = parseFloat(document.getElementById("cantidad-field").value);
-        const precioJuego = 25;
+        const precioJuego = parseInt(document.getElementById("precio").value);
         const total = cantidad * precioJuego;
         document.getElementById("total-field").value = total;
     });

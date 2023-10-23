@@ -346,7 +346,7 @@ function buildGetSalesDataUrl(tituloVenta, cliente, vendedor, fechaVenta) {
 
 //#region 8. inicializacion de funcionalidad (CONTROLLER)
 
-initAddSaleButtonsHandler();
+//initAddSaleButtonsHandler();
 
 initFilterButtonsHandler();
 

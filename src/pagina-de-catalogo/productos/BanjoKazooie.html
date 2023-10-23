@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <header class="header">
         <a href="/src/pagina-principal/index.html">
@@ -64,15 +66,23 @@
                     y diseño de niveles ingenioso lo convierten en un juego esencial para cualquier amante de los
                     videojuegos y un ejemplo brillante de la era dorada de Rare en la década de 1990.
                 </p>
-
+                
+                <h3>Precio:</h3>
+                <div class="div__precio">
+                    <p class="producto__precio">$</p>
+                    <p id="precio" class="producto__precio">20</p>
+                </div>
+                
                 <form class="formulario">
-                    <select class="formulario__campo">
+                    <!-- <select class="formulario__campo">
                         <option disabled selected>-- Seleccionar Consola --</option>
                         <option>Xbox S/X</option>
                         <option>Play Station</option>
                         <option>Switch</option>
-                    </select>
-                    <input class="formulario__campo" id="cantidad-field" type="number" placeholder="Cantidad" value="1" min="1">
+                    </select> -->
+
+                    <input class="formulario__campo" id="cantidad-field" type="number" placeholder="Cantidad" value="1"
+                        min="1" required>
                     <input class="formulario__submit" type="button" value="Realizar Compra" onclick="mostrarModal()">
                 </form>
             </div>
@@ -83,28 +93,28 @@
         <div class="modal" onclick="event.stopPropagation();">
             <span class="close-button" onclick="ocultarModal()"></span>
             <h2 style="color: #000;">Play & Games</h2>
-<form id="sale-form" class="form-section">
-    <label for="titulo-field">Título:</label>
-    <input type="text" id="titulo-field" class="form-field" disabled value="Banjo Kazooie">
+            <form id="sale-form" class="form-section">
+                <label for="titulo-field">Título:</label>
+                <input type="text" id="titulo-field" class="form-field" disabled value="Banjo Kazooie">
 
-    <label for="customer-name-field">Nombre:</label>
-    <input type="text" id="customer-name-field" class="form-field" required>
+                <label for="customer-name-field">Nombre:</label>
+                <input type="text" id="customer-name-field" class="form-field" required>
 
-    <label for "customer-phone-field">Teléfono:</label>
-    <input type="tel" id="customer-phone-field" class="form-field" required>
+                <label for "customer-phone-field">Teléfono:</label>
+                <input type="tel" id="customer-phone-field" class="form-field" required>
 
-    <label for="sale-date-field">Fecha:</label>
-    <input type="date" id="sale-date-field" class="form-field" required>
+                <label for="sale-date-field">Fecha:</label>
+                <input type="date" id="sale-date-field" class="form-field" required>
 
-    <label for="salesman-field">Vendedor:</label>
-    <input class="form-field" type="text" id="salesman-field" value="Alexis Aldair" disabled>
+                <label for="salesman-field">Vendedor:</label>
+                <input class="form-field" type="text" id="salesman-field" value="Alexis Suarez" disabled>
 
-    <label for="total-field">Precio de Venta:</label>
-    <input type="number" id="total-field" class="form-field" value="25" disabled>
+                <label for="total-field">Precio de Venta:</label>
+                <input type="number" id="total-field" class="form-field" value="20" disabled>
 
-    <button type="button" onclick="hacerCompra()" class="btn-submit">Comprar</button>
-    <button class="btn-close" onclick="ocultarModal()">Cerrar</button>
-</form>
+                <button type="button" onclick="hacerCompra()" class="btn-submit">Comprar</button>
+                <button class="btn-close" onclick="ocultarModal()">Cerrar</button>
+            </form>
         </div>
     </div>
 
@@ -115,4 +125,5 @@
 
     <script src="js/producto.js"></script>
 </body>
+
 </html>
