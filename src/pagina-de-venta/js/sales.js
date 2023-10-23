@@ -257,14 +257,14 @@ function displayVideojuegosOptions(videojuegos) {
     const optionFilter = document.createElement("option");
 
     optionFilter.value = videojuegos.titulo;
-    optionFilter.text = `${videojuegos.titulo} - ${formatCurrency( videojuegos.precio )}`;
+    optionFilter.text = `${videojuegos.titulo}`;
 
     videojuegosFilter.appendChild(optionFilter);
 
     const optionModal = document.createElement("option");
 
     optionModal.value = videojuegos.titulo;
-    optionModal.text = `${videojuegos.titulo} - ${formatCurrency( videojuegos.precio )}`;
+    optionModal.text = `${videojuegos.titulo}`;
 
     videojuegosModal.appendChild(optionModal);
   });
