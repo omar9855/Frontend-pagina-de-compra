@@ -7,113 +7,6 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-    <style>
-        .modal-wrapper {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal {
-            background-color: #fff;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            width: 90%;
-            max-width: 600px;
-            max-height: 80%;
-            overflow-y: auto;
-            position: relative;
-        }
-
-        .close-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 20px;
-            cursor: pointer;
-        }
-
-        .close-button:before {
-            content: "\2716";
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            background-color: #000;
-            color: #fff;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 30px;
-        }
-
-        .close-button:hover {
-            background-color: #333;
-        }
-
-        .form-section {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-section label {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .form-field {
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            outline: none;
-            font-size: 16px;
-            transition: border-color 0.3s;
-            width: 100%;
-        }
-
-        .form-field:focus {
-            border-color: #007BFF;
-        }
-
-        .btn-submit {
-            background-color: #007BFF;
-            color: #fff;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .btn-submit:hover {
-            background-color: #0056b3;
-        }
-
-        .btn-close {
-            background-color: #ff5b5b;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 10px;
-            transition: background-color 0.3s;
-        }
-
-        .btn-close:hover {
-            background-color: #ff0000;
-        }
-    </style>
 </head>
 <body>
     <header class="header">
@@ -215,70 +108,11 @@
         </div>
     </div>
 
-<script>
-    function mostrarModal() {
-        var modal = document.getElementById("modal");
-        modal.style.display = "flex";
-    }
-
-    function ocultarModal() {
-        var modal = document.getElementById("modal");
-        modal.style.display = "none";
-    }
-
-    document.getElementById("cantidad-field").addEventListener("input", function () {
-        const cantidad = parseFloat(document.getElementById("cantidad-field").value);
-        const precioJuego = 25;
-        const total = cantidad * precioJuego;
-        document.getElementById("total-field").value = total;
-    });
-
-        function hacerCompra() {
-        const titulo = document.getElementById("titulo-field").value;
-        const nombre = document.getElementById("customer-name-field").value;
-        const telefono = document.getElementById("customer-phone-field").value;
-        const fecha = document.getElementById("sale-date-field").value;
-        const vendedor = document.getElementById("salesman-field").value;
-        const totalString = document.getElementById("total-field").value;
-        
-        const total = parseFloat(totalString);
-        
-        const data = {
-            tituloVenta: titulo,
-            cliente: nombre,
-            clienteTel: telefono,
-            fechaVenta: fecha,
-            vendedor: vendedor,
-            precioVenta: total,
-        };
-
-        console.log("Datos de la compra:", data);
-
-        // Realizar una solicitud POST a la API
-        fetch("https://6532f89ed80bd20280f63155.mockapi.io/api/venta", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => {
-            console.log("Respuesta de la API:", response);
-            return response.json()})
-        .then(data => {
-            console.log("Compra realizada con éxito. Datos de la compra:", data);
-        })
-        .catch(error => {
-            console.error("Error al realizar la compra:", error);
-        });
-
-        ocultarModal(); // Cierra el modal después de hacer la compra
-    }
-
-</script>
 
     <footer class="footer">
         <p class="footer__texto">Play & Games - Todos los derechos Reservados 2023.</p>
     </footer>
+
+    <script src="js/producto.js"></script>
 </body>
 </html>
