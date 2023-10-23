@@ -61,7 +61,12 @@
                     impresionante presentación y jugabilidad hacen de este juego un título imprescindible para cualquier
                     fanático de Naruto.
                 </p>
-
+                <h3>Precio:</h3>
+                <div class="div__precio">
+                    <p class="producto__precio">$</p>
+                    <p id="precio" class="producto__precio">50</p>
+                </div>
+                
                 <form class="formulario">
                     <select class="formulario__campo">
                         <option disabled selected>-- Seleccionar Consola --</option>
@@ -75,6 +80,35 @@
             </div>
         </div>
     </main>
+    <div class="modal-wrapper" id="modal" style="display: none;" onclick="ocultarModal()">
+        <div class="modal" onclick="event.stopPropagation();">
+            <span class="close-button" onclick="ocultarModal()"></span>
+            <h2 style="color: #000;">Play & Games</h2>
+            <form id="sale-form" class="form-section">
+                <label for="titulo-field">Título:</label>
+                <input type="text" id="titulo-field" class="form-field" disabled value="Naruto: Ultimate Ninja Storm">
+
+                <label for="customer-name-field">Nombre:</label>
+                <input type="text" id="customer-name-field" class="form-field" required>
+
+                <label for "customer-phone-field">Teléfono:</label>
+                <input type="tel" id="customer-phone-field" class="form-field" required>
+
+                <label for="sale-date-field">Fecha:</label>
+                <input type="date" id="sale-date-field" class="form-field" required>
+
+                <label for="salesman-field">Vendedor:</label>
+                <input class="form-field" type="text" id="salesman-field" value="Aldair Suarez" disabled>
+
+                <label for="total-field">Precio de Venta:</label>
+                <input type="number" id="total-field" class="form-field" value="50" disabled>
+
+                <button type="button" onclick="hacerCompra()" class="btn-submit">Comprar</button>
+                <button class="btn-close" onclick="ocultarModal()">Cerrar</button>
+            </form>
+        </div>
+    </div>
+
 
     <div class="modal-wrapper" id="modal" style="display: none;" onclick="ocultarModal()">
         <div class="modal" onclick="event.stopPropagation();">
