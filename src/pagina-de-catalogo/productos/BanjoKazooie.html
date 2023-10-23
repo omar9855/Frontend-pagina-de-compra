@@ -128,7 +128,7 @@
     <nav class="navegacion">
         <a class="navegacion__enlace" href="../../pagina-principal/index.html">Inicio</a>
         <a class="navegacion__enlace navegacion__enlace--activo" href="../paginaCatalogo.html">Catálogo</a>
-        <a class="navegacion__enlace" href="/src/pagina-de-venta/paginaVenta.html">Ventas</a>
+        <a class="navegacion__enlace" href="../../pagina-de-venta/paginaVenta.html">Ventas</a>
     </nav>
 
     <main class="contenedor">
@@ -180,7 +180,7 @@
                         <option>Switch</option>
                     </select>
                     <input class="formulario__campo" id="cantidad-field" type="number" placeholder="Cantidad" value="1" min="1">
-                    <input class="formulario__submit" type="button" value="Agregar al Carrito" onclick="mostrarModal()">
+                    <input class="formulario__submit" type="button" value="Realizar Compra" onclick="mostrarModal()">
                 </form>
             </div>
         </div>
@@ -190,49 +190,92 @@
         <div class="modal" onclick="event.stopPropagation();">
             <span class="close-button" onclick="ocultarModal()"></span>
             <h2 style="color: #000;">Play & Games</h2>
-            <form id="sale-form" class="form-section">
-                <label for="titulo-field">Título:</label>
-                <input type="text" id="titulo-field" class="form-field" disabled value="Banjo Kazooie">
+<form id="sale-form" class="form-section">
+    <label for="titulo-field">Título:</label>
+    <input type="text" id="titulo-field" class="form-field" disabled value="Banjo Kazooie">
 
-                <label for="customer-name-field">Nombre:</label>
-                <input type="text" id="customer-name-field" class="form-field" required>
+    <label for="customer-name-field">Nombre:</label>
+    <input type="text" id="customer-name-field" class="form-field" required>
 
-                <label for="customer-phone-field">Teléfono:</label>
-                <input type="tel" id="customer-phone-field" class="form-field" required>
+    <label for "customer-phone-field">Teléfono:</label>
+    <input type="tel" id="customer-phone-field" class="form-field" required>
 
-                <label for="sale-date-field">Fecha:</label>
-                <input type="date" id "sale-date-field" class="form-field" required>
+    <label for="sale-date-field">Fecha:</label>
+    <input type="date" id="sale-date-field" class="form-field" required>
 
-                <label for="salesman-field">Vendedor:</label>
-                <input class="form-field" type="text" id="salesman-field" value="Alexis Aldair" disabled>
+    <label for="salesman-field">Vendedor:</label>
+    <input class="form-field" type="text" id="salesman-field" value="Alexis Aldair" disabled>
 
-                <label for="total-field">Precio de Venta:</label>
-                <input type="number" id="total-field" class="form-field" value="25" disabled>
+    <label for="total-field">Precio de Venta:</label>
+    <input type="number" id="total-field" class="form-field" value="25" disabled>
 
-                <button type="submit" class="btn-submit">Comprar</button>
-                <button class="btn-close" onclick="ocultarModal()">Cerrar</button>
-            </form>
+    <button type="button" onclick="hacerCompra()" class="btn-submit">Comprar</button>
+    <button class="btn-close" onclick="ocultarModal()">Cerrar</button>
+</form>
         </div>
     </div>
 
-    <script>
-        function mostrarModal() {
-            var modal = document.getElementById("modal");
-            modal.style.display = "flex";
-        }
+<script>
+    function mostrarModal() {
+        var modal = document.getElementById("modal");
+        modal.style.display = "flex";
+    }
 
-        function ocultarModal() {
-            var modal = document.getElementById("modal");
-            modal.style.display = "none";
-        }
+    function ocultarModal() {
+        var modal = document.getElementById("modal");
+        modal.style.display = "none";
+    }
 
-        document.getElementById("cantidad-field").addEventListener("input", function () {
-            const cantidad = parseFloat(document.getElementById("cantidad-field").value);
-            const precioJuego = 25;
-            const total = cantidad * precioJuego;
-            document.getElementById("total-field").value = total;
+    document.getElementById("cantidad-field").addEventListener("input", function () {
+        const cantidad = parseFloat(document.getElementById("cantidad-field").value);
+        const precioJuego = 25;
+        const total = cantidad * precioJuego;
+        document.getElementById("total-field").value = total;
+    });
+
+        function hacerCompra() {
+        const titulo = document.getElementById("titulo-field").value;
+        const nombre = document.getElementById("customer-name-field").value;
+        const telefono = document.getElementById("customer-phone-field").value;
+        const fecha = document.getElementById("sale-date-field").value;
+        const vendedor = document.getElementById("salesman-field").value;
+        const totalString = document.getElementById("total-field").value;
+        
+        const total = parseFloat(totalString);
+        
+        const data = {
+            tituloVenta: titulo,
+            cliente: nombre,
+            clienteTel: telefono,
+            fechaVenta: fecha,
+            vendedor: vendedor,
+            precioVenta: total,
+        };
+
+        console.log("Datos de la compra:", data);
+
+        // Realizar una solicitud POST a la API
+        fetch("https://6532f89ed80bd20280f63155.mockapi.io/api/venta", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => {
+            console.log("Respuesta de la API:", response);
+            return response.json()})
+        .then(data => {
+            console.log("Compra realizada con éxito. Datos de la compra:", data);
+        })
+        .catch(error => {
+            console.error("Error al realizar la compra:", error);
         });
-    </script>
+
+        ocultarModal(); // Cierra el modal después de hacer la compra
+    }
+
+</script>
 
     <footer class="footer">
         <p class="footer__texto">Play & Games - Todos los derechos Reservados 2023.</p>
