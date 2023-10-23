@@ -22,6 +22,8 @@ git clone https://github.com/janeth-montero/desarrollo-frontend-ventas.git
 cd desarrollo-frontend-ventas
 ```
 
+3.- Pagina de mocka Api
+https://6532f89ed80bd20280f63155.mockapi.io/api/venta
 
 ## Tecnologías Utilizadas
 
