@@ -86,9 +86,9 @@ function displaySalesTable(sales) {
       <td>${sale.tituloVenta}</td>
       <td>${sale.cliente}</td>
       <td>${sale.clienteTel}</td>
-      <td>${formatDate(sale.saleDate)}</td>
+      <td>${formatDate(sale.fechaVenta)}</td>
       <td>${sale.vendedor}</td>
-      <td class="text-right">${formatCurrency(sale.salePrice)}</td>
+      <td class="text-right">${formatCurrency(sale.precioVenta)}</td>
       <td>
         <button class="btn-delete" data-sale-id="${sale.id}">Eliminar</button>
       </td>
@@ -174,7 +174,7 @@ function resetSales() {
 }
 
 function searchSales() {
-  const tituloVenta = document.getElementById("tituloVenta-filter").value;
+  const tituloVenta = document.getElementById("videojuegos-filter").value;
   const cliente = document.getElementById("cliente-filter").value;
   const vendedor = document.getElementById("vendedor-filter").value;
   const fechaVenta = document.getElementById("fecha-filter").value;
